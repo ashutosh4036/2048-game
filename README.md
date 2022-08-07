@@ -1,33 +1,75 @@
-2048-Animated-react
+2048-React game
 ==========
 
-[Play it here](https://2048-utqrsh.netlify.app/)
+2048 is a number puzzle game. When the squares of the same number are merged together, they will add up. Each round will have an extra square with 2 or 4 written on it, and the game ends when the square cannot be moved. Players have to find a way to make up a square with 2048 (or larger) in this small 16 squares.
 
-![](https://github.com/Utqrsh04/Animated-2048/blob/master/src/assets/img/2048.png)
+# Getting Started with Create React App
 
-### React
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The logic is in [index.js](https://github.com/Utqrsh04/Animated-2048/blob/master/src/helper/index.js). 
-There is one main component called [BoardView](https://github.com/Utqrsh04/Animated-2048/blob/master/src/components/BoardView.jsx) which keeps a Board object as its state. It handles all the events by forwarding them to the Board appropriately, and then propagates the changes to its child components. As promised by React, there is almost no direct DOM manipulation - except for attaching the keyDown listener to ```window``` so the events can be handled on the whole page instead of only when the board is focused.
+## Available Scripts
 
-The [TileView](https://github.com/Utqrsh04/Animated-2048/blob/master/src/components/Tile.jsx) is where most of the fun view stuff happens. It receives a [Tile](https://github.com/Utqrsh04/Animated-2048/blob/64a4d34b61229661b4c75b090888fd4331927e81/src/components/Tile.jsx#L19) in its props object and determines whether it is new or moving, and if it's moving - what are the source and the destination. Then it sets the appropriate CSS classes in order to trigger the correct animations.
+In the project directory, you can run:
 
-### CSS Animations
+### `npm start`
 
-The animations are implemented in SASS. Since there is a separate class for each movement from cell A to cell B, This happens with SASS in [style.scss](https://github.com/Utqrsh04/Animated-2048/blob/master/src/styles.scss).
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Building and running
-
-To run, simply clone the repo , install dependencies and start a web server serving the main project directory.
-
-    git clone https://github.com/Utqrsh04/Animated-2048.git
-    cd Animated-2048
-    npm install 
-    npm start
-    Start Playing & Enjoy 🔥😎
-
-and the game will be accessible on ```localhost:3000```.
-The page will reload if you make edits.
+The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-## Special Credits to [Romain Cousin](https://www.behance.net/gallery/16173271/2048-Animated-Edition) for his awesome design. 
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
