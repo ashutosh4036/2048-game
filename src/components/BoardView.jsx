@@ -81,9 +81,9 @@ const BoardView = () => {
       </div>
       <div>
         <br />
-        🚀 Use Arrow Keys to move the tiles.
+          To move the tiles use the arrow keys.
         <br />
-        🚀 Press Key N for New Game.
+          To start a new game press N.
       </div>
     </div>
   );
